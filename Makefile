@@ -1,13 +1,13 @@
-.PHONY: serve build deploy
+.PHONY: test serve build deploy
+
+test:
+	npm run test
 
 serve:
 	npm run serve
 
-build:
+build: test
 	npm run build
 
 deploy: build
 	npm run deploy
-
-
-
