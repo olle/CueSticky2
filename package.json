@@ -2,7 +2,11 @@
   "private": true,
   "dependencies": {},
   "devDependencies": {
-    "flyps": "^0.1.0"
+    "flyps": "^0.1.0",
+    "parcel": "^1.12.3"
   },
-  "scripts": {}
+  "scripts": {
+    "serve": "parcel index.html",
+    "build": "parcel build src/**/*.js"
+  }
 }
