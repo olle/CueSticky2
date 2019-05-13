@@ -1,35 +1,21 @@
 /**
- * A vector (math) implementation.
+ * A vector (math) implementation, bleh!
  */
-export function dotx(a, b) {
+export function neu(xVal, yVal) {
+  return { x: xVal, y: yVal };
+}
+export function dot(a, b) {
   return a.x * b.x + a.y * b.y;
 }
-
-// /**
-//  * CSCSVector.java - Projektuppgift HT2004
-//  *
-//  * En vektor-klass som hanterar den grundläggande aritmetiken för vektorer.
-//  * Implementerad för att användas i projektuppgiften "biljardspel" HT2004.
-//  *
-//  * @version 1.2
-//  * @date 2004-11-12
-//  */
-// public class CSVector {
-
-//     /** Retunerar skalärprodukten av vektorn och v */
-//     public double dotProd(CSVector v) {
-//         return v.getX() * x + v.getY() * y;
-//     }
-
-//     /** Adderar Vektorn och v */
-//     public CSVector add(CSVector v) {
-// 	return new CSVector((v.getX() + x), (v.getY() + y));
-//     }
-
-//     /** Subtraherar Vektorn och v */
-//     public CSVector sub(CSVector v) {
-//         return new CSVector((x - v.getX()), (y - v.getY()));
-//     }
+export function add(a, b) {
+  return { x: a.x + b.x, y: a.y + b.y };
+}
+export function sub(a, b) {
+  return { x: a.x - b.x, y: a.y - b.y };
+}
+export function abs(a) {
+  return Math.sqrt(a.x * a.x + a.y * a.y);
+}
 
 //     /** Kalyklerar absolutbeloppet av vektorn */
 //     public double abs() {
