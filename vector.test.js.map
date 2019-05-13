@@ -1,0 +1,1 @@
+{"version":3,"sources":["vector.test.js"],"names":["describe","it","expect","toBeTruthy"],"mappings":";AAAAA,SAAS,SAAU,WACjBC,GAAG,eAAgB,WACjBC,QAAO,GAAMC","file":"vector.test.js","sourceRoot":"../src","sourcesContent":["describe(\"vector\", () => {\n  it(\"always fails\", () => {\n    expect(true).toBeTruthy();\n  });\n});\n"]}
