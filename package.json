@@ -3,10 +3,12 @@
   "dependencies": {},
   "devDependencies": {
     "flyps": "^0.1.0",
+    "gh-pages": "^2.0.1",
     "parcel": "^1.12.3"
   },
   "scripts": {
     "serve": "parcel index.html",
-    "build": "parcel build src/**/*.js"
+    "build": "parcel build src/**/*.js",
+    "deploy": "gh-pages -d dist"
   }
 }
