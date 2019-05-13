@@ -1,7 +1,9 @@
 /**
  * A vector (math) implementation.
  */
-
+export function dotx(a, b) {
+  return a.x * b.x + a.y * b.y;
+}
 
 // /**
 //  * CSCSVector.java - Projektuppgift HT2004
@@ -13,48 +15,6 @@
 //  * @date 2004-11-12
 //  */
 // public class CSVector {
-
-//     // INSTANSVARIABLER -------------------------------------------------------
-//     private double x, y;
-
-//     // KONSTRUKTORER ----------------------------------------------------------
-//     /** Standardkontruktorn */
-//     public CSVector() {
-//         x = 0;
-//         y = 0;
-//     }
-
-//     /**  Skapar vektor med invärden a och b */
-//     public CSVector(double a, double b) {
-//         x = a;
-//         y = b;
-//     }
-
-//     /** Sätter vektorn till a, b */
-//     public void set(double a, double b) {
-//         x = a;
-//         y = b;
-//     }
-
-//     /** Sätter vektorns x-värde */
-//     public void setX(double a) {
-//         x = a;
-//     }
-
-//     /** Sätter vektorn y-värde */
-//     public void setY(double b) {
-//         y = b;
-//     }
-
-//     /** Retunerar vektorns x-värde */
-//     public double getX() {
-//         return x;
-//     }
-
-//     /** Retunerar vektorns y-värde */
-//     public double getY() {
-//         return y;
-//     }
 
 //     /** Retunerar skalärprodukten av vektorn och v */
 //     public double dotProd(CSVector v) {

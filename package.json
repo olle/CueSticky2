@@ -2,6 +2,9 @@
   "private": true,
   "dependencies": {},
   "devDependencies": {
+    "@babel/core": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
+    "babel-jest": "^24.8.0",
     "flyps": "^0.1.0",
     "gh-pages": "^2.0.1",
     "jest": "^24.8.0",
@@ -12,5 +15,10 @@
     "serve": "parcel index.html",
     "build": "parcel build src/**/*.js",
     "deploy": "gh-pages -d dist"
+  },
+  "jest": {
+    "roots": [
+      "<rootDir>/src"
+    ]
   }
 }
