@@ -1,0 +1,8 @@
+{
+  "private": true,
+  "dependencies": {},
+  "devDependencies": {
+    "flyps": "^0.1.0"
+  },
+  "scripts": {}
+}
