@@ -1,1 +1,1 @@
-{"version":3,"sources":["index.js"],"names":["alert"],"mappings":";AACEA,MAAM","file":"index.js","sourceRoot":"../src","sourcesContent":["(function() {\n  alert(\"Hello World!\");\n})();\n"]}
+{"version":3,"sources":[],"names":[],"mappings":"","file":"index.js","sourceRoot":"../src"}
