@@ -1,4 +1,4 @@
-import { neu, dot, add, sub, abs } from "./vector";
+import { neu, dot, add, sub, abs, mul } from "./vector";
 
 describe("vector", () => {
   it("builds a vector", () => {
@@ -24,7 +24,12 @@ describe("vector", () => {
   });
 
   it("calculates the absolute value", () => {
-    let a = neu(3,4);
+    let a = neu(3, 4);
     expect(abs(a)).toEqual(5);
+  });
+
+  it("multiplies", () => {
+    let a = neu(3, 4);
+    expect(mul(a, 2)).toEqual({ x: 6, y: 8 });
   });
 });
