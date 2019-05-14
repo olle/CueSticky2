@@ -1,7 +1,10 @@
-.PHONY: test serve build deploy
+.PHONY: test watch serve build deploy
 
 test:
 	npm run test
+
+watch:
+	npm run watch
 
 serve:
 	npm run serve

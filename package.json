@@ -12,6 +12,7 @@
   },
   "scripts": {
     "test": "jest",
+    "watch": "jest --watch",
     "serve": "parcel index.html",
     "build": "parcel build src/**/*.js",
     "deploy": "gh-pages -d dist"
