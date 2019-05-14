@@ -1,21 +1,21 @@
 /**
  * A vector (math) implementation, bleh!
  */
-export function neu(xVal, yVal) {
-  return { x: xVal, y: yVal };
+export function neu(a, bi) {
+  return { a: a, bi: bi };
 }
-export function dot(a, b) {
-  return a.x * b.x + a.y * b.y;
+export function dot(x, y) {
+  return x.a * y.a + x.bi * y.bi;
 }
-export function add(a, b) {
-  return neu(a.x + b.x, a.y + b.y);
+export function add(x, y) {
+  return neu(x.a + y.a, x.bi + y.bi);
 }
-export function sub(a, b) {
-  return neu(a.x - b.x, a.y - b.y);
+export function sub(x, y) {
+  return neu(x.a - y.a, x.bi - y.bi);
 }
-export function abs(a) {
-  return Math.sqrt(a.x * a.x + a.y * a.y);
+export function abs(x) {
+  return Math.sqrt(x.a * x.a + x.bi * x.bi);
 }
-export function mul(a, k) {
-  return neu(k * a.x, k * a.y);
+export function mul(x, k) {
+  return neu(k * x.a, k * x.bi);
 }
