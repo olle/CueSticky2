@@ -16,6 +16,6 @@ export function sub(x, y) {
 export function abs(x) {
   return Math.sqrt(x.a * x.a + x.bi * x.bi);
 }
-export function mul(x, k) {
-  return neu(k * x.a, k * x.bi);
+export function mul(x, u) {
+  return neu(x.a * u, x.bi * u);
 }
