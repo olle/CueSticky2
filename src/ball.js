@@ -37,3 +37,19 @@ export function collide(b1, b2) {
   }
   return [b1, b2];
 }
+
+export function wall(b, x, y, dim) {
+  var vv = b.velocity.bi;
+  var hv = b.velocity.a;
+  if (
+    (b.position.bi - b.radius < dim && vv < 0) ||
+    (b.position.bi + b.radius > y - dim && vv > 0)
+  ) {
+    return { ...b, velocity: { ...b.velocity, bi: -vv } };
+  } else if (
+    (b.position.a - b.radius < dim && hv < 0) ||
+    (b.position.a + b.radius > x - dim && hv > 0)
+  ) {
+    return { ...b, velocity: { ...b.velocity, a: --hv } };
+  }
+}

@@ -71,4 +71,5 @@ describe("ball", () => {
     expect(b.velocity).toEqual({ a: 0, bi: 0 });
     expect(b.position).toEqual({ a: 0, bi: 0 });
   });
+
 });
