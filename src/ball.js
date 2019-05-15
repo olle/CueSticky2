@@ -55,5 +55,5 @@ export function wall(b, x, y, dim) {
 }
 
 export function pocket(b, p) {
-  return vec.abs(vec.sub(b.position, p)) < b.radius;
+  return vec.abs(vec.sub(b.position, p.position)) < p.radius;
 }
