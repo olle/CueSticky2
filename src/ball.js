@@ -21,7 +21,7 @@ export function move(ball, delta, alpha) {
   return { ...ball, position: pos, velocity: vel };
 }
 
-export function collide(b1, b2) {
+export function bounce(b1, b2) {
   var posDiff = vec.sub(b2.position, b1.position);
   var velDiff = vec.sub(b2.velocity, b1.velocity);
   var dp1 = vec.dot(velDiff, posDiff);
@@ -52,4 +52,8 @@ export function wall(b, x, y, dim) {
   ) {
     return { ...b, velocity: { ...b.velocity, a: --hv } };
   }
+}
+
+export function pocket(b, p) {
+  return vec.abs(vec.sub(b.position, p)) < b.radius;
 }
