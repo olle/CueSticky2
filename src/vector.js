@@ -4,18 +4,18 @@
 export function neu(a, bi) {
   return { a: a, bi: bi };
 }
-export function dot(x, y) {
-  return x.a * y.a + x.bi * y.bi;
+export function dot(v1, v2) {
+  return v1.a * v2.a + v1.bi * v2.bi;
 }
-export function add(x, y) {
-  return neu(x.a + y.a, x.bi + y.bi);
+export function add(v1, v2) {
+  return neu(v1.a + v2.a, v1.bi + v2.bi);
 }
-export function sub(x, y) {
-  return neu(x.a - y.a, x.bi - y.bi);
+export function sub(v1, v2) {
+  return neu(v1.a - v2.a, v1.bi - v2.bi);
 }
-export function abs(x) {
-  return Math.sqrt(x.a * x.a + x.bi * x.bi);
+export function abs(v1) {
+  return Math.sqrt(v1.a * v1.a + v1.bi * v1.bi);
 }
-export function mul(x, u) {
-  return neu(x.a * u, x.bi * u);
+export function mul(v1, u) {
+  return neu(v1.a * u, v1.bi * u);
 }
