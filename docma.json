@@ -1,7 +1,8 @@
 {
   "app": {
-    "title": "CueSticky2 Reference"
+    "title": "CueSticky2 Reference",
+    "base": "/CueSticky2/docs"
   },
   "src": ["./src/**/*.js"],
-  "dest": "./docs"
+  "dest": "./dist/docs"
 }

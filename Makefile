@@ -15,5 +15,5 @@ serve:
 build: test
 	npm run build
 
-deploy: build
+deploy: build docs
 	npm run deploy

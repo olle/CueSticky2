@@ -15,6 +15,7 @@
     "test": "jest",
     "watch": "jest --watch",
     "docs": "docma",
+    "serve-docs": "docma serve",
     "serve": "parcel index.html",
     "build": "parcel build src/**/*.js",
     "deploy": "gh-pages -d dist"
