@@ -20,6 +20,7 @@
  * 
  * @param {number} a real
  * @param {number} bi imaginary
+ * @returns {Vector} a new vector object
  */
 export function neu(a, bi) {
   return { a: a, bi: bi };
@@ -30,6 +31,7 @@ export function neu(a, bi) {
  * 
  * @param {Vector} v1
  * @param {Vector} v2
+ * @returns {number} the scalar product real number
  */
 export function dot(v1, v2) {
   return v1.a * v2.a + v1.bi * v2.bi;
