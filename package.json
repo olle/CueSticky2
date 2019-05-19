@@ -17,7 +17,7 @@
     "docs": "docma",
     "serve-docs": "docma serve",
     "serve": "parcel index.html",
-    "build": "parcel build src/**/*.js",
+    "build": "parcel build index.html --public-url /CueSticky2/",
     "deploy": "gh-pages -d dist"
   },
   "jest": {
