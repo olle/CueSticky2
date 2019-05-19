@@ -1,15 +1,15 @@
 .PHONY: test watch docs serve build deploy
 
-test:
+test: node_modules
 	npm run test
 
-watch:
+watch: node_modules
 	npm run watch
 
-docs:
+docs: node_modules
 	npm run docs
 
-serve:
+serve: node_modules
 	npm run serve
 
 build: test
@@ -17,3 +17,11 @@ build: test
 
 deploy: build docs
 	npm run deploy
+
+clean:
+	rm -rf dist
+	rm -rf node_modules
+	rm -rf .cache
+
+node_modules:
+	npm install
