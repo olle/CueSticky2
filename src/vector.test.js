@@ -1,26 +1,27 @@
 import { neu, dot, add, sub, abs, mul } from "./vector";
 
 describe("vector", () => {
+
   it("builds a vector", () => {
     expect(neu(1, 2)).toEqual({ a: 1, bi: 2 });
   });
 
   it("calculates the dot product", () => {
-    let x = neu(1, 2);
-    let y = neu(2, 1);
-    expect(dot(x, y)).toEqual(4);
+    let v1 = neu(-6, 8);
+    let v2 = neu(5, 12);
+    expect(dot(v1, v2)).toEqual(66);
   });
 
   it("adds vectors", () => {
-    let x = neu(1, 2);
-    let y = neu(2, 1);
-    expect(add(x, y)).toEqual({ a: 3, bi: 3 });
+    let v1 = neu(-6, 8);
+    let v2 = neu(5, 12);
+    expect(add(v1, v2)).toEqual({ a: -1, bi: 20 });
   });
 
   it("subtracts vectors", () => {
-    let x = neu(1, 2);
-    let y = neu(2, 1);
-    expect(sub(x, y)).toEqual({ a: -1, bi: 1 });
+    let v1 = neu(-6, 8);
+    let v2 = neu(5, 12);
+    expect(sub(v1, v2)).toEqual({ a: -11, bi: -4 });
   });
 
   it("calculates the absolute value", () => {
