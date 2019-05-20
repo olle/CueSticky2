@@ -5,6 +5,7 @@
  */
 
 import * as vec from "./vector";
+import { formatResultsErrors } from "jest-message-util";
 
 /**
  * A ball data object implementation using vectors to support position,
@@ -36,13 +37,14 @@ const BALL_RADIUS = 0.029;
  * static, without any direction or velocity, located at the `{ a: 0, bi: 0}`
  * point on the plane.
  *
+ * @param {object} args - optional constructor arguments
  * @returns {Ball} a new ball object instance
  */
-export function neu() {
+export function neu(args) {
   return {
     radius: BALL_RADIUS,
     mass: BALL_RADIUS * BALL_RADIUS,
-    position: vec.neu(0, 0),
+    position: (args && args.position) || vec.neu(0, 0),
     velocity: vec.neu(0, 0)
   };
 }
@@ -55,7 +57,7 @@ export function neu() {
  * @param {Ball} ball - to move
  * @param {number} delta - distance factor
  * @param {number} alpha - resistance coefficient
- * 
+ *
  * @returns {Ball} a new ball object instance
  */
 export function move(ball, delta, alpha) {
@@ -63,6 +65,17 @@ export function move(ball, delta, alpha) {
   let pos = vec.add(ball.position, dt);
   let vel = vec.mul(ball.velocity, alpha);
   return { ...ball, position: pos, velocity: vel };
+}
+
+/**
+ * Determines if the two balls are intersecting or not.
+ *
+ * @param {Ball} b1 one ball
+ * @param {Ball} b2 the other ball
+ * @returns {boolean} `true` if the balls are intersecting, `false` otherwise.
+ */
+export function intersects(b1, b2) {
+  return vec.abs(vec.sub(b1.position, b2.position)) < b1.radius + b2.radius;
 }
 
 export function bounce(b1, b2) {
