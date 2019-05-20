@@ -1,10 +1,41 @@
 /**
- * A pool ball.
+ * A pool ball implementation, in 2D.
+ *
+ * @module ball
  */
+
 import * as vec from "./vector";
 
+/**
+ * A ball data object implementation using vectors to support position,
+ * movement, velocity and intersection calculations.
+ *
+ * @example
+ *
+ *  {
+ *     radius: 0.029,
+ *     mass: 0.000841,
+ *     position: { a: 3, bi: 4 },
+ *     velocity: { a: 0, bi: 0 }
+ *  }
+ *
+ * @typedef {Object} Ball
+ * @property {number} radius - the ball radius
+ * @property {number} mass - the ball mass
+ * @property {Vector} position - the ball position, on the plane
+ * @property {Vector} velocity - the current direction and speed
+ */
+
+/**
+ * A typical pool ball radius.
+ */
 const BALL_RADIUS = 0.029;
 
+/**
+ * Creates a new pool ball data structure.
+ * 
+ * @returns {Ball} a new ball object instance
+ */
 export function neu() {
   return {
     radius: BALL_RADIUS,

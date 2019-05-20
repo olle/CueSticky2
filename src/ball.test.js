@@ -25,7 +25,7 @@ describe("ball", () => {
     var b = neu();
     expect(b.position).toEqual({ a: 0, bi: 0 });
     expect(b.velocity).toEqual({ a: 0, bi: 0 });
-    b = move(b, 2, .5);
+    b = move(b, 2, 0.5);
     expect(b.position).toEqual({ a: 0, bi: 0 });
     expect(b.velocity).toEqual({ a: 0, bi: 0 });
   });
@@ -39,5 +39,4 @@ describe("ball", () => {
     expect(b.position).toEqual({ a: 1, bi: 1 });
     expect(b.velocity).toEqual({ a: 0.2, bi: 0.2 });
   });
-
 });
