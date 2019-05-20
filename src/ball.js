@@ -32,8 +32,10 @@ import * as vec from "./vector";
 const BALL_RADIUS = 0.029;
 
 /**
- * Creates a new pool ball data structure.
- * 
+ * Creates a new pool ball data structure. The newly created ball is completely
+ * static, without any direction or velocity, located at the `{ a: 0, bi: 0}`
+ * point on the plane.
+ *
  * @returns {Ball} a new ball object instance
  */
 export function neu() {
@@ -45,6 +47,17 @@ export function neu() {
   };
 }
 
+/**
+ * Moves the given ball along its current direction and velocity, with a
+ * distance given by a `delta` factor, leaving the ball with a velocity,
+ * reduced by the `alpha` resistance.
+ *
+ * @param {Ball} ball - to move
+ * @param {number} delta - distance factor
+ * @param {number} alpha - resistance coefficient
+ * 
+ * @returns {Ball} a new ball object instance
+ */
 export function move(ball, delta, alpha) {
   let dt = vec.mul(ball.velocity, delta);
   let pos = vec.add(ball.position, dt);
