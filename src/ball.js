@@ -57,7 +57,6 @@ export function neu(args) {
  * @param {Ball} ball - to move
  * @param {number} delta - distance factor
  * @param {number} alpha - resistance coefficient
- *
  * @returns {Ball} a new ball object instance
  */
 export function move(ball, delta, alpha) {
@@ -82,9 +81,7 @@ export function bounce(b1, b2) {
   var posDiff = vec.sub(b2.position, b1.position);
   var velDiff = vec.sub(b2.velocity, b1.velocity);
   var dp1 = vec.dot(velDiff, posDiff);
-  var dist = vec.abs(vec.sub(b1.position, b2.position));
-  var bounds = b2.radius + b1.radius;
-  if (dp1 < 0 && dist < bounds) {
+  if (dp1 < 0 && intersects(b1, b2)) {
     var force = (2 * b2.mass) / (b1.mass + b2.mass);
     var dp2 = vec.dot(velDiff, posDiff) / vec.dot(posDiff, posDiff);
     var q = vec.mul(posDiff, dp2);
