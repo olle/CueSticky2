@@ -77,7 +77,15 @@ export function intersects(b1, b2) {
   return vec.abs(vec.sub(b1.position, b2.position)) < b1.radius + b2.radius;
 }
 
-export function bounce(b1, b2) {
+/**
+ * Determines if the two given balls have collided or not, and returns the
+ * balls with updated velocities, according the the collision.
+ *
+ * @param {Ball} b1 one ball
+ * @param {Ball} b2 the other ball
+ * @returns {array} containing two new balls, with updated velocity vectors
+ */
+export function collided(b1, b2) {
   var posDiff = vec.sub(b2.position, b1.position);
   var velDiff = vec.sub(b2.velocity, b1.velocity);
   var dp1 = vec.dot(velDiff, posDiff);
@@ -108,6 +116,13 @@ export function wall(b, x, y, dim) {
   }
 }
 
+/**
+ * Determines if the given ball has fallen into the provided pocket.
+ *
+ * @param {Ball} ball
+ * @param {Pocket} pocket
+ * @returns {boolean} `true` if the ball is in the pocket, `false` otherwise.
+ */
 export function pocket(b, p) {
   return vec.abs(vec.sub(b.position, p.position)) < p.radius;
 }
