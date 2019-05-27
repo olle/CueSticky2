@@ -5,7 +5,6 @@
  */
 
 import * as vec from "./vector";
-import { formatResultsErrors } from "jest-message-util";
 
 /**
  * A ball data object implementation using vectors to support position,
