@@ -1,7 +1,7 @@
 /**
  * A pool table pocket.
  *
- * @module ball
+ * @module pocket
  */
 import * as vec from "./vector";
 
