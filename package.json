@@ -9,7 +9,8 @@
     "flyps": "^0.1.0",
     "gh-pages": "^2.0.1",
     "jest": "^24.8.0",
-    "parcel": "^1.12.3"
+    "parcel": "^1.12.3",
+    "clean-css": ">=4.1.11"
   },
   "scripts": {
     "test": "jest",
