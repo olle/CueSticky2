@@ -3,7 +3,7 @@
 <html>
   <head>
     <title>CueSticky2</title>
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width" />
     <style>
       :root {
         --color-black: #000;
@@ -36,6 +36,11 @@
         line-height: 1;
         padding: 0;
         margin: 30px 0;
+      }
+      @media (max-width: 599px) {
+        h1 {
+          transform: translateY(-200%);
+        }
       }
       a {
         color: var(--color-gold);
