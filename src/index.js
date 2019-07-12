@@ -1,3 +1,3 @@
-/**
- * Ok... well, then.
- */
+(function() {
+  console.log("HERE");
+})();
