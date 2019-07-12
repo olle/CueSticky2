@@ -1,0 +1,1 @@
+{"version":3,"sources":["src/index.js"],"names":["console","log"],"mappings":";AACEA,QAAQC,IAAI","file":"src.fc995247.js","sourceRoot":"..","sourcesContent":["(function() {\n  console.log(\"HERE\");\n})();\n"]}
