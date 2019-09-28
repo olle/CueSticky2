@@ -1,4 +1,4 @@
-.PHONY: test watch docs serve build deploy
+.PHONY: test watch docs run serve build deploy
 
 test: node_modules
 	npm run test
@@ -9,7 +9,7 @@ watch: node_modules
 docs: node_modules
 	npm run docs
 
-serve: node_modules
+run serve: node_modules
 	npm run serve
 
 build: test
