@@ -2,15 +2,15 @@
   "private": true,
   "dependencies": {},
   "devDependencies": {
-    "@babel/core": "^7.5.x",
-    "@babel/preset-env": "^7.5.x",
-    "babel-jest": "^24.8.0",
+    "@babel/core": "^7.6.4",
+    "@babel/preset-env": "^7.6.3",
+    "babel-jest": "^24.9.0",
+    "clean-css": ">=4.1.11",
     "docma": "^3.2.2",
-    "flyps": "^0.6.x",
-    "gh-pages": "^2.0.1",
-    "jest": "^24.8.0",
-    "parcel": "^1.12.3",
-    "clean-css": ">=4.1.11"
+    "flyps": "^0.6.1",
+    "gh-pages": "^2.1.1",
+    "jest": "^24.9.0",
+    "parcel": "^1.12.4"
   },
   "scripts": {
     "test": "jest",
